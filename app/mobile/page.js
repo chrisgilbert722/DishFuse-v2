@@ -2,6 +2,7 @@ import AIDemoMobile from "./sections/AIDemo";
 import WhyDishFuseMobile from "./sections/WhyDishFuse";
 import PricingMobile from "./sections/Pricing";
 import TestimonialsMobile from "./sections/Testimonials";
+import FinalCTAMobile from "./sections/FinalCTA";
 
 export default function MobileHome() {
   return (
@@ -24,7 +25,8 @@ export default function MobileHome() {
       {/* === TESTIMONIALS SECTION === */}
       <TestimonialsMobile />
 
-      {/* Future: Final CTA */}
+      {/* === FINAL CTA SECTION === */}
+      <FinalCTAMobile />
     </main>
   );
 }
