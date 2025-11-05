@@ -2,11 +2,13 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { fakeLogout, getUser } from "../lib/auth";
+import ProfitChart from "./Chart";
 
 export default function DashboardPage() {
   const router = useRouter();
   const [user, setUser] = useState(null);
 
+  // check for stored session
   useEffect(() => {
     const loggedUser = getUser();
     if (!loggedUser) {
@@ -16,11 +18,13 @@ export default function DashboardPage() {
     }
   }, [router]);
 
+  // handle logout
   function handleLogout() {
     fakeLogout();
     router.push("/login");
   }
 
+  // demo data
   const metrics = [
     { label: "Total Profit (Last 30 Days)", value: "$24,320", change: "+12%" },
     { label: "Inventory Cost Reduction", value: "$1,940", change: "-8%" },
@@ -36,6 +40,7 @@ export default function DashboardPage() {
   return (
     <main className="min-h-screen bg-[#0b1424] text-white flex flex-col items-center px-6 py-12">
       <div className="w-full max-w-5xl">
+        {/* Header */}
         <div className="flex justify-between items-center mb-10">
           <h1 className="text-4xl font-bold text-yellow-400">
             Welcome back, {user || "User"}
@@ -48,10 +53,10 @@ export default function DashboardPage() {
           </button>
         </div>
 
+        {/* AI Overview */}
         <h2 className="text-2xl font-semibold mb-6 text-yellow-300">
           AI Overview
         </h2>
-
         <div className="grid grid-cols-3 gap-6 mb-12">
           {metrics.map((m, i) => (
             <div
@@ -75,6 +80,10 @@ export default function DashboardPage() {
           ))}
         </div>
 
+        {/* Profit Chart */}
+        <ProfitChart />
+
+        {/* AI Recommendations */}
         <h2 className="text-2xl font-semibold mb-4 text-yellow-300">
           AI Recommendations
         </h2>
