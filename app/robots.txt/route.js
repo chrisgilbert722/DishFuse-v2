@@ -9,3 +9,4 @@ Sitemap: https://dishfuse-v2.vercel.app/sitemap.xml`;
     },
   });
 }
+ 
