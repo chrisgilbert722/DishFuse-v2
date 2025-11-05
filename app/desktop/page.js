@@ -5,6 +5,7 @@ import WhyDishFuse from "./sections/WhyDishFuse";
 import Pricing from "./sections/Pricing";
 import Testimonials from "./sections/Testimonials";
 import FinalCTA from "./sections/FinalCTA";
+import Footer from "./components/Footer";
 
 export default function DesktopHome() {
   return (
@@ -34,7 +35,8 @@ export default function DesktopHome() {
       {/* === FINAL CTA === */}
       <FinalCTA />
 
-      {/* Footer will be added next phase */}
+      {/* === FOOTER === */}
+      <Footer />
     </main>
   );
 }
