@@ -8,17 +8,16 @@ export default function ProfitChart() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    // dummy data
+    // sample data
     const profits = [21000, 22000, 19500, 23000, 24320];
     const labels = ["Jun", "Jul", "Aug", "Sep", "Oct"];
-
     const maxProfit = Math.max(...profits);
     const chartHeight = 140;
     const barWidth = 60;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // draw axes
+    // axes
     ctx.strokeStyle = "#334";
     ctx.lineWidth = 2;
     ctx.beginPath();
@@ -27,20 +26,19 @@ export default function ProfitChart() {
     ctx.lineTo(canvas.width - 20, chartHeight + 40);
     ctx.stroke();
 
-    // draw bars
+    // bars
     profits.forEach((value, i) => {
       const x = 70 + i * (barWidth + 25);
       const barHeight = (value / maxProfit) * chartHeight;
       const y = chartHeight + 40 - barHeight;
       ctx.fillStyle = "#FFD53D";
       ctx.fillRect(x, y, barWidth, barHeight);
-
       ctx.fillStyle = "#fff";
       ctx.font = "12px sans-serif";
       ctx.fillText(labels[i], x + 10, chartHeight + 60);
     });
 
-    // animate line trend
+    // trend line
     ctx.beginPath();
     ctx.strokeStyle = "#00FF88";
     ctx.lineWidth = 2;
