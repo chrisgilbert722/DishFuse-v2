@@ -1,7 +1,9 @@
+"use client";   // 👈 makes this a client component so events/JS work
+
 export default function Hero() {
   return (
     <section className="relative h-[80vh] w-full flex flex-col items-center justify-center text-center bg-[#0b1424] text-white mt-16 overflow-hidden">
-      {/* Background video with fallback */}
+      {/* Background video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
         src="/hero.mp4"
@@ -9,13 +11,11 @@ export default function Hero() {
         loop
         muted
         playsInline
-        onError={(e) => {
-          console.warn("Video failed to load, using fallback.");
-          e.target.poster = "/logo-header.png";
-        }}
       />
+      {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0b1424]/60 to-[#111b2d]/90" />
 
+      {/* Content */}
       <div className="relative z-10 max-w-3xl px-6">
         <img
           src="/logo-header.png"
