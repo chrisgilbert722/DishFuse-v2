@@ -1,3 +1,5 @@
+import HeaderMobile from "./components/Header";
+import HeroMobile from "./sections/Hero";
 import AIDemoMobile from "./sections/AIDemo";
 import WhyDishFuseMobile from "./sections/WhyDishFuse";
 import PricingMobile from "./sections/Pricing";
@@ -8,12 +10,16 @@ export default function MobileHome() {
   return (
     <main className="min-h-screen bg-[#0b1424] text-white flex flex-col items-center">
       {/* ==============================
-          DishFuse Mobile Core Page
+          DishFuse Mobile Full Page
           ============================== */}
 
-      {/* HERO / HEADER / FOOTER stay untouched */}
+      {/* === HEADER (NAV BAR) === */}
+      <HeaderMobile />
 
-      {/* === AI CHAT DEMO SECTION === */}
+      {/* === HERO SECTION === */}
+      <HeroMobile />
+
+      {/* === AI CHAT DEMO === */}
       <AIDemoMobile />
 
       {/* === WHY DISHFUSE SECTION === */}
@@ -25,8 +31,10 @@ export default function MobileHome() {
       {/* === TESTIMONIALS SECTION === */}
       <TestimonialsMobile />
 
-      {/* === FINAL CTA SECTION === */}
+      {/* === FINAL CTA === */}
       <FinalCTAMobile />
+
+      {/* Footer will be added next phase */}
     </main>
   );
 }
