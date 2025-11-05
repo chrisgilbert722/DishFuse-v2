@@ -2,10 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // ✅ Ensure static files from /public are included
-  output: "standalone",
-  images: {
-    unoptimized: true,
+  // Force Next.js to treat /public as static root
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/:path*',
+      },
+    ];
   },
 };
 
