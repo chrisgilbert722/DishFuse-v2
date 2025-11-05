@@ -1,5 +1,6 @@
 import AIDemo from "./sections/AIDemo";
 import WhyDishFuse from "./sections/WhyDishFuse";
+import Pricing from "./sections/Pricing";
 
 export default function DesktopHome() {
   return (
@@ -8,7 +9,7 @@ export default function DesktopHome() {
           DishFuse Desktop Core Page
           ============================== */}
 
-      {/* HERO / HEADER / FOOTER are untouched and will be added back later */}
+      {/* HERO / HEADER / FOOTER stay untouched */}
 
       {/* === AI CHAT DEMO SECTION === */}
       <AIDemo />
@@ -16,7 +17,10 @@ export default function DesktopHome() {
       {/* === WHY DISHFUSE SECTION === */}
       <WhyDishFuse />
 
-      {/* Future sections (Pricing, Testimonials, etc.) will stack below here */}
+      {/* === PRICING SECTION === */}
+      <Pricing />
+
+      {/* Future: Testimonials, Final CTA */}
     </main>
   );
 }
