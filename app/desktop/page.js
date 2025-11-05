@@ -1,3 +1,5 @@
+import Header from "./components/Header";
+import Hero from "./sections/Hero";
 import AIDemo from "./sections/AIDemo";
 import WhyDishFuse from "./sections/WhyDishFuse";
 import Pricing from "./sections/Pricing";
@@ -8,12 +10,16 @@ export default function DesktopHome() {
   return (
     <main className="min-h-screen bg-[#0b1424] text-white flex flex-col items-center">
       {/* ==============================
-          DishFuse Desktop Core Page
+          DishFuse Desktop Full Page
           ============================== */}
 
-      {/* HERO / HEADER / FOOTER stay untouched */}
+      {/* === HEADER (NAV BAR) === */}
+      <Header />
 
-      {/* === AI CHAT DEMO SECTION === */}
+      {/* === HERO SECTION === */}
+      <Hero />
+
+      {/* === AI CHAT DEMO === */}
       <AIDemo />
 
       {/* === WHY DISHFUSE SECTION === */}
@@ -25,8 +31,10 @@ export default function DesktopHome() {
       {/* === TESTIMONIALS SECTION === */}
       <Testimonials />
 
-      {/* === FINAL CTA SECTION === */}
+      {/* === FINAL CTA === */}
       <FinalCTA />
+
+      {/* Footer will be added next phase */}
     </main>
   );
 }
