@@ -54,3 +54,9 @@ export default function Testimonials() {
             src={src}
             alt="trust badge"
             className="h-10 w-auto grayscale hover:grayscale-0 transition"
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
