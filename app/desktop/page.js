@@ -1,6 +1,7 @@
 import AIDemo from "./sections/AIDemo";
 import WhyDishFuse from "./sections/WhyDishFuse";
 import Pricing from "./sections/Pricing";
+import Testimonials from "./sections/Testimonials";
 
 export default function DesktopHome() {
   return (
@@ -20,7 +21,10 @@ export default function DesktopHome() {
       {/* === PRICING SECTION === */}
       <Pricing />
 
-      {/* Future: Testimonials, Final CTA */}
+      {/* === TESTIMONIALS SECTION === */}
+      <Testimonials />
+
+      {/* Future: Final CTA */}
     </main>
   );
 }
