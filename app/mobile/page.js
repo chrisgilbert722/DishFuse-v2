@@ -1,5 +1,6 @@
 import AIDemoMobile from "./sections/AIDemo";
 import WhyDishFuseMobile from "./sections/WhyDishFuse";
+import PricingMobile from "./sections/Pricing";
 
 export default function MobileHome() {
   return (
@@ -8,7 +9,7 @@ export default function MobileHome() {
           DishFuse Mobile Core Page
           ============================== */}
 
-      {/* HERO / HEADER / FOOTER are untouched and will be added back later */}
+      {/* HERO / HEADER / FOOTER stay untouched */}
 
       {/* === AI CHAT DEMO SECTION === */}
       <AIDemoMobile />
@@ -16,7 +17,10 @@ export default function MobileHome() {
       {/* === WHY DISHFUSE SECTION === */}
       <WhyDishFuseMobile />
 
-      {/* Future sections (Pricing, Testimonials, etc.) will stack below here */}
+      {/* === PRICING SECTION === */}
+      <PricingMobile />
+
+      {/* Future: Testimonials, Final CTA */}
     </main>
   );
 }
