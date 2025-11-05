@@ -5,6 +5,7 @@ import WhyDishFuseMobile from "./sections/WhyDishFuse";
 import PricingMobile from "./sections/Pricing";
 import TestimonialsMobile from "./sections/Testimonials";
 import FinalCTAMobile from "./sections/FinalCTA";
+import FooterMobile from "./components/Footer";
 
 export default function MobileHome() {
   return (
@@ -34,7 +35,8 @@ export default function MobileHome() {
       {/* === FINAL CTA === */}
       <FinalCTAMobile />
 
-      {/* Footer will be added next phase */}
+      {/* === FOOTER === */}
+      <FooterMobile />
     </main>
   );
 }
