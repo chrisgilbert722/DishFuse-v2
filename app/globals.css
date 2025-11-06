@@ -1,10 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ---------------------------------------------------
+   DishFuse Global Styles
+   --------------------------------------------------- */
 
-html,
-body {
+/* === Font Imports === */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap");
+
+/* === Base Reset === */
+:root {
+  color-scheme: dark;
+  background-color: #0f1b34;
+  scroll-behavior: smooth;
+}
+
+/* Remove default margin/padding */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* === Body Defaults === */
+body {
+  @apply font-sans bg-navy text-white tracking-wide antialiased;
+}
+
+/* === Typography === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading text-white leading-tight;
+}
+
+p {
+  @apply text-gray-300 leading-relaxed;
+}
+
+/* === Section Rhythm === */
+section {
+  @apply py-section;
+}
+
+/* === Link Styles === */
+a {
+  @apply transition-colors duration-300;
+}
+a:hover {
+  @apply text-gold-light;
+}
+
+/* === Buttons === */
+button,
+.btn {
+  @apply transition-transform duration-200 ease-out;
+}
+button:hover,
+.btn:hover {
+  @apply scale-105;
+}
+
+/* === Gradients === */
+.bg-hero-gradient {
+  background: linear-gradient(180deg, rgba(15, 27, 52, 0.6) 0%, rgba(8, 16, 33, 0.9) 100%);
+}
+
+/* === Utilities for Cinematic Feel === */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(255, 206, 75, 0.3);
+}
+
+.bg-navy-gradient {
+  background: linear-gradient(180deg, #0f1b34 0%, #081021 100%);
 }
