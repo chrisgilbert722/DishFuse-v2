@@ -1,6 +1,9 @@
 import Header from "./components/Header";
 import Hero from "./sections/Hero";
+import TrustBar from "./sections/TrustBar";
+import Metrics from "./sections/Metrics";
 import AIDemo from "./sections/AIDemo";
+import Features from "./sections/Features";
 import WhyDishFuse from "./sections/WhyDishFuse";
 import Pricing from "./sections/Pricing";
 import Testimonials from "./sections/Testimonials";
@@ -9,33 +12,38 @@ import Footer from "./components/Footer";
 
 export default function DesktopHome() {
   return (
-    <main className="min-h-screen bg-[#0b1424] text-white flex flex-col items-center">
-      {/* ==============================
-          DishFuse Desktop Full Page
-          ============================== */}
-
-      {/* === HEADER (NAV BAR) === */}
+    <main className="min-h-screen bg-[#0f1b34] text-white flex flex-col items-stretch">
+      {/* HEADER (sticky) */}
       <Header />
 
-      {/* === HERO SECTION === */}
+      {/* HERO — cinematic & emotional on light navy */}
       <Hero />
 
-      {/* === AI CHAT DEMO === */}
+      {/* TRUST BAR */}
+      <TrustBar />
+
+      {/* METRICS STRIP */}
+      <Metrics />
+
+      {/* AI DEMO (cinematic chat loop still below) */}
       <AIDemo />
 
-      {/* === WHY DISHFUSE SECTION === */}
+      {/* FEATURES — all-in-one differentiator */}
+      <Features />
+
+      {/* WHY DISHFUSE — reinforce one-platform advantage */}
       <WhyDishFuse />
 
-      {/* === PRICING SECTION === */}
-      <Pricing />
+      {/* PRICING — anchor + id for nav jump */}
+      <div id="pricing"><Pricing /></div>
 
-      {/* === TESTIMONIALS SECTION === */}
-      <Testimonials />
+      {/* TESTIMONIALS / TRUST */}
+      <div id="testimonials"><Testimonials /></div>
 
-      {/* === FINAL CTA === */}
-      <FinalCTA />
+      {/* FINAL CTA — primary goal */}
+      <div id="cta"><FinalCTA /></div>
 
-      {/* === FOOTER === */}
+      {/* FOOTER */}
       <Footer />
     </main>
   );
