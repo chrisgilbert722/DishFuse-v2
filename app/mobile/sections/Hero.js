@@ -3,6 +3,7 @@
 export default function HeroMobile() {
   return (
     <section className="relative h-[70vh] w-full flex flex-col items-center justify-center text-center bg-[#0b1424] text-white mt-12 px-4 overflow-hidden">
+      {/* background video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
         src="/hero.mp4"
@@ -11,8 +12,10 @@ export default function HeroMobile() {
         muted
         playsInline
       />
+      {/* gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0b1424]/60 to-[#111b2d]/90" />
 
+      {/* main content */}
       <div className="relative z-10">
         <img
           src="/logo-header.png"
