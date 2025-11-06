@@ -1,6 +1,9 @@
 import HeaderMobile from "./components/Header";
 import HeroMobile from "./sections/Hero";
+import TrustBarMobile from "./sections/TrustBar";
+import MetricsMobile from "./sections/Metrics";
 import AIDemoMobile from "./sections/AIDemo";
+import FeaturesMobile from "./sections/Features";
 import WhyDishFuseMobile from "./sections/WhyDishFuse";
 import PricingMobile from "./sections/Pricing";
 import TestimonialsMobile from "./sections/Testimonials";
@@ -9,33 +12,17 @@ import FooterMobile from "./components/Footer";
 
 export default function MobileHome() {
   return (
-    <main className="min-h-screen bg-[#0b1424] text-white flex flex-col items-center">
-      {/* ==============================
-          DishFuse Mobile Full Page
-          ============================== */}
-
-      {/* === HEADER (NAV BAR) === */}
+    <main className="min-h-screen bg-[#0f1b34] text-white flex flex-col items-stretch">
       <HeaderMobile />
-
-      {/* === HERO SECTION === */}
       <HeroMobile />
-
-      {/* === AI CHAT DEMO === */}
+      <TrustBarMobile />
+      <MetricsMobile />
       <AIDemoMobile />
-
-      {/* === WHY DISHFUSE SECTION === */}
+      <FeaturesMobile />
       <WhyDishFuseMobile />
-
-      {/* === PRICING SECTION === */}
-      <PricingMobile />
-
-      {/* === TESTIMONIALS SECTION === */}
-      <TestimonialsMobile />
-
-      {/* === FINAL CTA === */}
-      <FinalCTAMobile />
-
-      {/* === FOOTER === */}
+      <div id="pricing"><PricingMobile /></div>
+      <div id="testimonials"><TestimonialsMobile /></div>
+      <div id="cta"><FinalCTAMobile /></div>
       <FooterMobile />
     </main>
   );
